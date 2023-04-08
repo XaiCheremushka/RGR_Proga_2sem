@@ -174,7 +174,6 @@ void animation() {
 
 		if (i % 6 == 0)
 			Sleep(15);
-
 		i++;
 	}
 
@@ -185,10 +184,10 @@ void animation() {
 	SelectObject(screen, arevCircle);
 	i = 1;
 	double x1 = 0.2;
-	double x2 = 0.04;
-	double x3 = 0.04;
+	double x2 = 0.0;
+	double x3 = 0.0;
 	
-	for (double x = 0.1; x < 5.0; x += 0.1) {
+	for (double x = 0.1; x <= 5.0; x += 0.1) {
 		//7-8
 		MoveToEx(screen, (x - 10.0) * 10 + CENTREX, -10 * sqrt(121.00 - ((x - 10.0) * (x - 10.0))) + СENTREY, NULL);
 		LineTo(screen, ((x - 10.0) + 0.1) * 10 + CENTREX, -10 * sqrt(121.00 - (((x - 10.0) + 0.1) * ((x - 10.0) + 0.1))) + СENTREY);
@@ -199,7 +198,7 @@ void animation() {
 		MoveToEx(screen, (x + 5.0) * 10 + CENTREX, -10 * sqrt(121.00 - ((x + 5.0) * (x + 5.0))) + СENTREY, NULL);
 		LineTo(screen, ((x + 5.0) + 0.1) * 10 + CENTREX, -10 * sqrt(121.00 - (((x + 5.0) + 0.1) * ((x + 5.0) + 0.1))) + СENTREY);
 		//2-4 and 6-7
-		if (i < 25) {
+		if (i <= 25) {
 			MoveToEx(screen, (x2 + 10.0) * 10 + CENTREX, -10 * sqrt(121.00 - ((x2 + 10.0) * (x2 + 10.0))) + СENTREY, NULL); //2-2.4
 			LineTo(screen, ((x2 + 10.0) + 0.04) * 10 + CENTREX, -10 * sqrt(121.00 - (((x2 + 10.0) + 0.04) * ((x2 + 10.0) + 0.04))) + СENTREY);
 
@@ -225,7 +224,6 @@ void animation() {
 		MoveToEx(screen, (-5.0 - x) * 10 + CENTREX, -10 * -sqrt(121.00 - ((-5.0 - x) * (-5.0 - x))) + СENTREY, NULL);
 		LineTo(screen, ((-5.0 - x) - 0.1) * 10 + CENTREX, -10 * -sqrt(121.00 - (((-5.0 - x) - 0.1) * ((-5.0 - x) - 0.1))) + СENTREY);
 		
-
 		if (i % 5 == 0)
 			Sleep(15);
 		i++;
@@ -235,18 +233,6 @@ void animation() {
 
 
 
-
-	for (double x = -11.0; x < 10.9; x += 0.1) {
-		MoveToEx(screen, x * 10 + CENTREX, -10 * sqrt(121.00 - (x * x)) + СENTREY, NULL);
-		LineTo(screen, (x + 0.1) * 10 + CENTREX, -10 * sqrt(121.00 - ((x + 0.1) * (x + 0.1))) + СENTREY);
-
-		MoveToEx(screen, x * 10 + CENTREX, -10 * -sqrt(121.00 - (x * x)) + СENTREY, NULL);
-		LineTo(screen, (x + 0.1) * 10 + CENTREX, -10 * -sqrt(121.00 - ((x + 0.1) * (x + 0.1))) + СENTREY);
-
-		if (i % 6 == 0)
-			Sleep(10);
-		i++;
-	}
 	
 
 
