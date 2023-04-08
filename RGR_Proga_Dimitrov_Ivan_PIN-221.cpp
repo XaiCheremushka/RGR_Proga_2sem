@@ -224,8 +224,8 @@ void animation() {
 		MoveToEx(screen, (-5.0 - x) * 10 + CENTREX, -10 * -sqrt(121.00 - ((-5.0 - x) * (-5.0 - x))) + СENTREY, NULL);
 		LineTo(screen, ((-5.0 - x) - 0.1) * 10 + CENTREX, -10 * -sqrt(121.00 - (((-5.0 - x) - 0.1) * ((-5.0 - x) - 0.1))) + СENTREY);
 		
-		if (i % 5 == 0)
-			Sleep(15);
+		if (i % 3 == 0)
+			Sleep(22);
 		i++;
 		x1 += 0.2;
 	}
