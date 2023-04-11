@@ -49,8 +49,6 @@ double proverkaFunc(double y, double x) {
 		return 404.0;
 }
 
-
-
 //Анимация меню
 void menuAnim(string Menu[7]) {
 	setlocale(0, "RUS");
@@ -138,7 +136,6 @@ void animation() {
 	LineTo(screen, CENTREX + 2, СENTREY);
 	
 	// Вторая часть
-	//int x = CENTREX; int R = CENTREX + 27; int y = sqrt(pow(R, 2) - pow(x, 2));
 	SelectObject(screen, arevWhite);
 
 	//variant 2
@@ -164,7 +161,6 @@ void animation() {
 
 		i++;
 	}
-
 	// Третья часть
 	SelectObject(screen, arevCircle);
 	i = 1;
@@ -363,8 +359,6 @@ void table()
 	printf("|_______|_________|__________|____________|\n");
 	SetConsoleTextAttribute(table, FOREGROUND_GREEN | FOREGROUND_BLUE);
 	_getch();
-
-	
 }
 
 void graficF2() {
@@ -496,12 +490,10 @@ void grafik()
 	_getch();
 }
 
-
 double f1(double x)
 {
 	return 0.5 + cos(x) - 2 * x * sin(x);
 }
-
 
 void uravn()
 {
@@ -596,11 +588,11 @@ void integral()
 	float h, x, f;
 	printf("Вычисление интеграла cos(x) / (sin(x) + cos(x))\n");
 	cout << "Введите нижний предел интегрирования - ";
-	cin >> a;
+	cin >> b;
 	//a = 1;
 	//b = 2;
 	cout << "\nВведите верхний предел интегрирования - ";
-	cin >> b;
+	cin >> a;
 	//n = 1000;
 	cout << "\nВведите количество частей, на которые следует разделить интервал интегрирования - ";
 	cin >> n;
@@ -704,54 +696,12 @@ int main()
 				GoToXY(x, y);
 				SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 				integral();
-				_getch();
 				system("CLS");
 				break;
 			case 6:
 				exit(0);
 			}
 			break;
-		//default:
-		//	cout << "Код " << (int)click << endl;
 		}
 	}
 }
-
-/* variant 1
-	i = 1;
-	for (double x = -9.0; x <= 9.0; x+=0.1) {
-
-		if (x > 0 && ((sqrt(20 * (x + 0.1))) < 9.0)) {
-			// 1
-			MoveToEx(screen, x * 20 + CENTREX, -20 * (sqrt(20 * x)) + СENTREY, NULL);
-			LineTo(screen, (x + 0.1) * 20 + CENTREX, -20 * (sqrt(20 * (x + 0.1))) + СENTREY);
-			//4
-			MoveToEx(screen, x * 20 + CENTREX, -20 * (sqrt(2.5 * x)) + СENTREY, NULL);
-			LineTo(screen, (x + 0.1) * 20 + CENTREX, -20 * (sqrt(2.5 * (x + 0.1))) + СENTREY);
-			//5
-			MoveToEx(screen, x * 20 + CENTREX, -20 * (-0.4 * (pow(sqrt(x), 4))) + СENTREY, NULL);
-			LineTo(screen, (x + 0.1) * 20 + CENTREX, -20 * (-0.4 * (pow(sqrt(x + 0.1), 4))) + СENTREY);
-			//6
-			MoveToEx(screen, x * 20 + CENTREX, -20 * (-0.05 * (pow(sqrt(x), 4))) + СENTREY, NULL);
-			LineTo(screen, (x + 0.1) * 20 + CENTREX, -20 * (-0.05 * (pow(sqrt(x + 0.1), 4))) + СENTREY);
-		}
-		else if (x < 0 && ((-(sqrt(20 * (-(x + 0.1))))) > -9.0)) {
-			//2
-			MoveToEx(screen, x * 20 + CENTREX, -20 * (-(sqrt(20 * x))) + СENTREY, NULL);
-			LineTo(screen, (x + 0.1) * 20 + CENTREX, -20 * (-(sqrt(20 * (x + 0.1)))) + СENTREY);
-			//3
-			MoveToEx(screen, x * 20 + CENTREX, -20 * (-(sqrt(2.5 * x))) + СENTREY, NULL);
-			LineTo(screen, (x + 0.1) * 20 + CENTREX, -20 * (-(sqrt(2.5 * (x + 0.1)))) + СENTREY);
-			//7
-			MoveToEx(screen, x * 20 + CENTREX, -20 * (0.05 * (pow(sqrt(x), 4))) + СENTREY, NULL);
-			LineTo(screen, (x + 0.1) * 20 + CENTREX, -20 * (0.05 * (pow(sqrt(x + 0.1), 4))) + СENTREY);
-			//8
-			MoveToEx(screen, x * 20 + CENTREX, -20 * (0.4 * (pow(sqrt(x), 4))) + СENTREY, NULL);
-			LineTo(screen, (x + 0.1) * 20 + CENTREX, -20 * (0.4 * (pow(sqrt(x + 0.1), 4))) + СENTREY);
-		}
-
-		if (i%3 == 0)
-			Sleep(22);
-		i++;
-		//y = sqrt(x + CENTREX)
-	}*/
